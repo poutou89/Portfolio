@@ -1,0 +1,19 @@
+@use "../abstract/variables" as v;
+
+body {
+    margin: 0;
+    background-color: v.$bg-color;
+}
+
+h1, h2, h3, h4 {
+    font-family: v.$font-titre;
+}
+
+p {
+    font-family: v.$font-text;
+}
+
+a {
+    text-decoration: v.$style-less;
+    font-family: v.$font-titre;
+}

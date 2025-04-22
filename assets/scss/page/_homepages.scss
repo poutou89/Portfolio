@@ -1,0 +1,21 @@
+@use "../abstract/variables" as v;
+
+#presentation {
+    .container {
+        display: flex;
+        justify-content: space-around;
+        .presentation-img {
+            width: 21%;
+            img {
+                width: 100%;
+            }
+        }
+        .presentation-text {
+            width: 50%;
+            color: v.$text-color;
+            p {
+                margin-bottom: 20vh;
+            }
+        }
+    }
+}

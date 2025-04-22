@@ -1,0 +1,30 @@
+@use "../abstract/variables" as v;
+
+.btn {
+    padding: 1rem 2rem;
+    background-color: v.$click-color;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px rgba(v.$text-color, 0.2);
+    border: 2px solid v.$bg-color;
+    transition: 200ms;
+}
+
+.btn:hover {
+    color: v.$click-color;
+    background: v.$bg-color;
+    border: 2px solid v.$click-color;
+}
+
+.btn-second {
+    padding: 1rem 2rem;
+    border: 2px solid v.$click-color;
+    border-radius: 2px;
+    color: v.$click-color;
+    box-shadow: 0px 0px 20px rgba(v.$text-color, 0.2);
+    transition: 200ms;
+}
+
+.btn-second:hover {
+    background-color: v.$click-color;
+    color: v.$bg-color;
+}

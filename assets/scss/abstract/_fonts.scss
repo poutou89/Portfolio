@@ -1,0 +1,11 @@
+@use "../abstract/variables" as v;
+
+@font-face {
+    font-family: v.$font-titre;
+    src: url(../fonts/Tomorrow/Tomorrow-Regular.ttf);
+}
+
+@font-face {
+    font-family: v.$font-text;
+    src: url(../../fonts/Quicksand/static/Quicksand-Regular.ttf);
+}

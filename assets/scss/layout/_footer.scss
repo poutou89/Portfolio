@@ -1,0 +1,19 @@
+@use "../abstract/variables" as v;
+
+footer {
+    background-color: rgba(v.$text-color, 0.1);
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 4vh;
+        .footer-rs {
+            img {
+                transition: 500ms;
+            }
+            img:hover {
+                rotate: 25deg;
+            }
+        }
+    }
+}
