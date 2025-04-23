@@ -6,7 +6,7 @@
     height: 20vh;
     width: 100%;
     .fiche-img {
-        width: 10%;
+        width: 20vh;
         height: 100%;
         img {
             width: 100%;
@@ -18,9 +18,11 @@
 
         h3, p {
             color: v.$bg-color;
-            padding: 2vh;
+            padding: 0 2rem;
             background-color: v.$text-color;
             margin: 0;
+            width: 60%;
+            
         }
     }
     a {

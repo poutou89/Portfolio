@@ -71,6 +71,14 @@
                 background-size: contain;
                 background-position: 0 150px;
                 background-repeat: no-repeat;
+                img {
+                    opacity: 0.5;
+                    object-fit: cover;
+                    height: 100%;
+                }
+                img:hover {
+                    animation: glitch3 0.8s infinite;
+                }
             }
             .card:last-child:hover {
                 animation: glitch3 0.3s infinite;

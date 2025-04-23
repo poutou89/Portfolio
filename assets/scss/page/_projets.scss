@@ -19,6 +19,7 @@
                 .boutton {
                     position: absolute;
                     right: 2vh;
+                    text-transform: uppercase;
                 }
             }
             .fiche:nth-of-type(2) {
@@ -31,8 +32,14 @@
                         border-bottom-right-radius: 6px;
                     }
                 }
+                .fiche-text {
+                    position: absolute;
+                    text-align: end;
+                    right: 10vh;
+                }
                 .boutton {
                     left:2vh;
+                    right: inherit;
                 }
             }
         }

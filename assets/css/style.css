@@ -81,6 +81,7 @@ a {
 #presentation .container {
   display: flex;
   justify-content: space-around;
+  height: 80vh;
 }
 #presentation .container .presentation-img {
   width: 21%;
@@ -191,6 +192,14 @@ a {
   background-position: 0 150px;
   background-repeat: no-repeat;
 }
+#cards .container .card-bottom .card:last-child img {
+  opacity: 0.5;
+  object-fit: cover;
+  height: 100%;
+}
+#cards .container .card-bottom .card:last-child img:hover {
+  animation: glitch3 0.8s infinite;
+}
 #cards .container .card-bottom .card:last-child:hover {
   animation: glitch3 0.3s infinite;
 }
@@ -212,6 +221,7 @@ a {
 #projets .container .fiches .fiche .boutton {
   position: absolute;
   right: 2vh;
+  text-transform: uppercase;
 }
 #projets .container .fiches .fiche:nth-of-type(2) {
   flex-direction: row-reverse;
@@ -222,10 +232,117 @@ a {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
+#projets .container .fiches .fiche:nth-of-type(2) .fiche-text {
+  position: absolute;
+  text-align: end;
+  right: 10vh;
+}
 #projets .container .fiches .fiche:nth-of-type(2) .boutton {
   left: 2vh;
+  right: inherit;
 }
 
+@media screen and (max-width: 1024px) {
+  body #about .container p {
+    width: 100%;
+  }
+  body #cards .container .card-top, body #cards .container .card-bottom {
+    flex-direction: column;
+    margin: 0;
+  }
+  body #cards .container .card-top .card, body #cards .container .card-bottom .card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    margin: 2vh 0;
+  }
+  body #cards .container .card-top .card .card-img, body #cards .container .card-bottom .card .card-img {
+    width: 30vh;
+    height: 20vh;
+  }
+  body #cards .container .card-top .card .card-img img, body #cards .container .card-bottom .card .card-img img {
+    height: 80%;
+    object-position: center;
+    object-fit: contain;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+  }
+  body #cards .container .card-bottom .card:last-child {
+    background-position: center;
+    background-repeat: repeat;
+  }
+}
+@media screen and (max-width: 774px) {
+  .container {
+    max-width: 768px;
+    width: 95%;
+  }
+  body header .container {
+    justify-content: space-evenly;
+  }
+  body header .container ul {
+    display: none;
+  }
+  body header .container .menu {
+    display: flex;
+  }
+}
+@media screen and (max-width: 517px) {
+  body main #presentation .container .presentation-img {
+    display: none;
+  }
+  body main #presentation .container .presentation-text {
+    width: inherit;
+    text-align: center;
+  }
+  body main #presentation .container .presentation-text p {
+    width: 100%;
+  }
+  body main #cards .container .card-top .card, body main #cards .container .card-bottom .card {
+    flex-direction: column;
+    height: inherit;
+  }
+  body main #projets .container .fiches .fiche {
+    flex-direction: column;
+    height: 60vh;
+    position: inherit;
+  }
+  body main #projets .container .fiches .fiche .fiche-img {
+    height: 50%;
+  }
+  body main #projets .container .fiches .fiche .fiche-img img {
+    border-radius: 0;
+  }
+  body main #projets .container .fiches .fiche .fiche-text {
+    display: flex;
+    flex-direction: column;
+  }
+  body main #projets .container .fiches .fiche .fiche-text h3, body main #projets .container .fiches .fiche .fiche-text p {
+    width: 100%;
+    margin: 4vh 0;
+    padding: 0;
+    text-align: center;
+  }
+  body main #projets .container .fiches .fiche .boutton {
+    position: inherit;
+    margin: 0 0 10vh 0;
+  }
+  body main #projets .container .fiches .fiche:nth-of-type(2) {
+    flex-direction: inherit;
+  }
+  body main #projets .container .fiches .fiche:nth-of-type(2) .fiche-img img {
+    border-radius: 0;
+  }
+  body main #projets .container .fiches .fiche:nth-of-type(2) .boutton {
+    position: inherit;
+    left: inherit;
+  }
+  body main #projets .container .fiches .fiche:nth-of-type(2) .fiche-text {
+    position: inherit;
+    text-align: inherit;
+  }
+}
 .btn {
   padding: 1rem 2rem;
   background-color: #1DDDBC;
@@ -256,7 +373,7 @@ a {
 }
 
 .btn-thirsty {
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   border: 2px solid #1DDDBC;
   border-radius: 4px;
   color: #1DDDBC;
@@ -270,24 +387,28 @@ a {
 }
 
 .card {
-  width: 20%;
-  height: 50vh;
+  width: 25%;
   background-color: #F6F6F6;
   border-radius: 4px;
 }
 .card .card-img {
   width: 100%;
-  height: 40%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 }
 .card .card-img img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
+  height: 100%;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
+  overflow: hidden;
 }
 .card .card-text {
-  padding: 2rem;
+  text-align: center;
+  width: 100%;
 }
 .card .card-text h3, .card .card-text p {
   color: #0C0C0C;
@@ -300,7 +421,7 @@ a {
   width: 100%;
 }
 .fiche .fiche-img {
-  width: 10%;
+  width: 20vh;
   height: 100%;
 }
 .fiche .fiche-img img {
@@ -310,9 +431,10 @@ a {
 }
 .fiche .fiche-text h3, .fiche .fiche-text p {
   color: #0C0C0C;
-  padding: 2vh;
+  padding: 0 2rem;
   background-color: #F6F6F6;
   margin: 0;
+  width: 60%;
 }
 
 /*# sourceMappingURL=style.css.map */
