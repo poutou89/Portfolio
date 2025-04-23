@@ -28,3 +28,17 @@
     background-color: v.$click-color;
     color: v.$bg-color;
 }
+
+.btn-thirsty {
+    padding: 1rem 2rem;
+    border: 2px solid v.$click-color;
+    border-radius: 4px;
+    color: v.$click-color;
+    box-shadow: 0px 0px 20px rgba(v.$text-color, 0.2);
+    transition: 200ms;
+}
+
+.btn-thirsty:hover {
+    background-color: v.$click-color;
+    color: v.$text-color;
+}

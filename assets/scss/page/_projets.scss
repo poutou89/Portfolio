@@ -1,0 +1,40 @@
+@use "../abstract/variables" as v;
+
+#projets {
+    .container {
+        .fiches {
+            display: flex;
+            flex-direction: column;
+            gap: 7vh;
+            .fiche {
+                align-items: center;
+                position: relative;
+                border-radius: 8px;
+                .fiche-img {
+                    img {
+                        border-bottom-left-radius: 6px;
+                        border-top-left-radius: 6px;
+                    }
+                }
+                .boutton {
+                    position: absolute;
+                    right: 2vh;
+                }
+            }
+            .fiche:nth-of-type(2) {
+                flex-direction: row-reverse;
+                .fiche-img {
+                    img {
+                        border-bottom-left-radius: 0px;
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 6px;
+                        border-bottom-right-radius: 6px;
+                    }
+                }
+                .boutton {
+                    left:2vh;
+                }
+            }
+        }
+    }
+}
