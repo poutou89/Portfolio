@@ -13,8 +13,18 @@
         .presentation-text {
             width: 50%;
             color: v.$text-color;
+            h1 {
+                color: v.$click-color;
+            }
+            h2:last-of-type {
+                color: v.$click-color;
+            }
             p {
-                margin-bottom: 20vh;
+                margin: 4vh 0 16vh 0;
+                width: 75%;
+            }
+            a {
+                text-transform: uppercase;
             }
         }
     }

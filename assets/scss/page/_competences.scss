@@ -1,0 +1,81 @@
+@use "../abstract/variables" as v;
+
+  @keyframes glitch3 {
+    0% {
+      transform: none;
+      opacity: 0.25;
+    }
+    8% {
+      transform: translate(-2px, 3px);
+      opacity: 0.5;
+    }
+    10% {
+      transform: none;
+      opacity: 0.25;
+    }
+    28% {
+      transform: none;
+      opacity: 0.25;
+    }
+    30% {
+      transform: translate(5px, -2px);
+      opacity: 0.5;
+    }
+    33% {
+      transform: none;
+      opacity: 0.25;
+    }
+    45% {
+      transform: none;
+      opacity: 0.25;
+    }
+    55% {
+      transform: translate(5px, 1px);
+      opacity: 0.5;
+    }
+    60% {
+      transform: none;
+      opacity: 0.25;
+    }
+    72% {
+      transform: none;
+      opacity: 0.25;
+    }
+    78% {
+      transform: translate(-2px, -6px);
+      opacity: 0.5;
+    }
+    80% {
+      transform: none;
+      opacity: 0.25;
+    }
+    100% {
+      transform: none;
+      opacity: 0.25;
+    }
+  }
+
+#cards {
+    .container {
+        display: flex;
+        flex-direction: column;
+        .card-top, .card-bottom {
+            display: flex;
+            justify-content: space-around;
+            margin: 0 0 4vh 0;
+        }
+        .card-bottom {
+            .card:last-child {
+                opacity: 0.1;
+                background-image: url(../img/w.png);
+                background-size: contain;
+                background-position: 0 150px;
+                background-repeat: no-repeat;
+            }
+            .card:last-child:hover {
+                animation: glitch3 0.3s infinite;
+            }
+            
+            }
+        }
+    }
