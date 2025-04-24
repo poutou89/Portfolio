@@ -24,8 +24,15 @@
                 margin: 4vh 0 16vh 0;
                 width: 75%;
             }
-            a {
+            button {
                 text-transform: uppercase;
+            }
+            #downloadBtn {
+                background-color: v.$bg-color;
+            }
+            #downloadBtn:hover {
+                background-color: v.$click-color;
+                color: v.$bg-color;
             }
         }
     }
