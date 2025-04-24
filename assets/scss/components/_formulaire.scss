@@ -1,0 +1,95 @@
+@use "../abstract/variables" as v;
+
+
+.formulaire-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: v.$click-color;
+    color: v.$text-color;
+  
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .form-popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1;
+}
+
+
+.form-container {
+    background-color: v.$bg-color;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    color: v.$text-color;
+}
+
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 5px;
+    border-radius: 5px;
+    border: 1px solid v.$text-color;
+}
+
+.form-container button:first {
+    border: 1px solid v.$click-color;
+}
+
+.form-container textarea {
+    max-width: 90%;
+    min-height: 30vh;
+}
+
+.form-container button {
+    background-color: v.$bg-color;
+    color: v.$text-color;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-container button:first-of-type {
+    border: 1px solid v.$click-color;
+    color: v.$click-color;
+    text-align: center;
+}
+.form-container button:first-of-type:hover {
+    color: v.$bg-color;
+}
+
+.form-container button:last-of-type:hover {
+    color: inherit;
+    border: inherit;
+}
+.form-container .cancel {
+    background-color: #f44336;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.form-popup {
+    animation: showModal 0.5s ease-in-out;
+}
