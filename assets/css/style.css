@@ -128,6 +128,7 @@ a {
   line-height: 3;
   margin-top: 12vh;
   margin-bottom: 19vh;
+  padding: 2vh;
 }
 
 @keyframes glitch3 {
